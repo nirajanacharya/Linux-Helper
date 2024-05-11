@@ -15,19 +15,19 @@ display_menu() {
     echo "  ║ 5.  Check Disk Space                  ║"
     echo "  ║ 6.  Restart Network Service           ║"
     echo "  ║ 7.  Check System Information          ║"
-    echo "  ║ 8.  List Running Processes            ║"
-    echo "  ║ 9.  View System Logs                  ║"
-    echo "  ║ 10. Manage Users                      ║"
-    echo "  ║ 11. Backup Data                       ║"
-    echo "  ║ 12. Monitor System Performance        ║"
-    echo "  ║ 13. Configure Firewall                ║"
-    echo "  ║ 14. Manage Services                   ║"
-    echo "  ║ 15. Search for Files                  ║"
-    echo "  ║ 16. Modify File Permissions           ║"
-    echo "  ║ 17. Exit                              ║"
-    echo "  ╚══════════════════════════════════════=╝"
+    echo "  ║ 8.  Display Hardware Information      ║" # New option
+    echo "  ║ 9.  List Running Processes            ║"
+    echo "  ║ 10. View System Logs                  ║"
+    echo "  ║ 11. Manage Users                      ║"
+    echo "  ║ 12. Backup Data                       ║"
+    echo "  ║ 13. Monitor System Performance        ║"
+    echo "  ║ 14. Configure Firewall                ║"
+    echo "  ║ 15. Manage Services                   ║"
+    echo "  ║ 16. Search for Files                  ║"
+    echo "  ║ 17. Modify File Permissions           ║"
+    echo "  ║ 18. Exit                              ║"
+    echo "  ╚══════════════════════════════════════╝"
 
-    
     echo "  ║                 Version 1.0.0                ║"
     echo "  ║                 Developed by Nirajan Acharya ║"
 }
@@ -62,6 +62,17 @@ restart_network_service() {
 system_info() {
     uname -a
     lsb_release -a
+}
+
+display_hardware_info() {
+    echo "CPU Information:"
+    lscpu | grep -E '(Model name|Socket|Thread|Core|CPU MHz)'
+
+    echo -e "\nMemory Information:"
+    free -h
+
+    echo -e "\nDisk Information:"
+    df -h
 }
 
 list_processes() {
@@ -154,16 +165,17 @@ while true; do
         5) check_disk_space ;;
         6) restart_network_service ;;
         7) system_info ;;
-        8) list_processes ;;
-        9) view_system_logs ;;
-        10) manage_users ;;
-        11) backup_data ;;
-        12) monitor_performance ;;
-        13) configure_firewall ;;
-        14) manage_services ;;
-        15) search_files ;;
-        16) modify_permissions ;;
-        17) echo "Exiting..."; exit ;;
+        8) display_hardware_info ;;
+        9) list_processes ;;
+        10) view_system_logs ;;
+        11) manage_users ;;
+        12) backup_data ;;
+        13) monitor_performance ;;
+        14) configure_firewall ;;
+        15) manage_services ;;
+        16) search_files ;;
+        17) modify_permissions ;;
+        18) echo "Exiting..."; exit ;;
         *) echo "Invalid option. Please try again." ;;
     esac
     read -p "Press Enter to continue..."
