@@ -28,6 +28,16 @@ This bash script is developed to assist students in managing various tasks on a 
 3. Run the script: `./student_linux_helper.sh`
 4. Follow the on-screen menu to perform desired tasks.
 
+## Contributing
+
+Contributions are welcome and encouraged! If you'd like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix: `git checkout -b feature-name`.
+3. Make your changes and commit them: `git commit -m 'Add new feature'`.
+4. Push to the branch: `git push origin feature-name`.
+5. Submit a pull request detailing your changes.
+
 ## Author
 
 This script is developed by Niranjan Acharya. For any inquiries or feedback, please contact:
