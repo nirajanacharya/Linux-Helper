@@ -40,7 +40,7 @@ Contributions are welcome and encouraged! If you'd like to contribute to this pr
 
 ## Author
 
-This script is developed by Niranjan Acharya. For any inquiries or feedback, please contact:
+This script is developed by Nirajan Acharya. For any inquiries or feedback, please contact:
 - Email: nirajan.acharya666@gmail.com
-- GitHub: [niranjanacharya](https://github.com/NirajanAcharya666)
+- GitHub: [nirajanacharya](https://github.com/NirajanAcharya666)
 
