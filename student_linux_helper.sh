@@ -25,8 +25,11 @@ display_menu() {
     echo "  ║ 15. Search for Files                  ║"
     echo "  ║ 16. Modify File Permissions           ║"
     echo "  ║ 17. Exit                              ║"
+    echo "  ╚══════════════════════════════════════=╝"
+
+    
+    echo "  ║                 Version 1.0.0                ║"
     echo "  ║                 Developed by Nirajan Acharya ║"
-    echo "  ╚══════════════════════════════════════╝"
 }
 
 update_system() {
