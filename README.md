@@ -1,4 +1,4 @@
-#Linux Helper
+## Linux Helper
 
 This bash script is developed to assist students in managing various tasks on a Linux system. It provides a menu-driven interface to perform common system administration tasks such as updating the system, installing software packages, managing users, monitoring system performance, and more.
 
