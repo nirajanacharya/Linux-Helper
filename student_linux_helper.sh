@@ -6,7 +6,7 @@
 display_menu() {
     clear
     echo "  ╔══════════════════════════════════════╗"
-    echo "  ║       Student Linux Helper Script     ║"
+    echo "  ║        Linux Helper      ║"
     echo "  ╠══════════════════════════════════════╣"
     echo "  ║ 1.  Update System                     ║"
     echo "  ║ 2.  Install Software Packages         ║"
