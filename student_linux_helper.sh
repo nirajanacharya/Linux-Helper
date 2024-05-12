@@ -15,19 +15,20 @@ display_menu() {
     echo "  ║ 5.  Check Disk Space                  ║"
     echo "  ║ 6.  Restart Network Service           ║"
     echo "  ║ 7.  Check System Information          ║"
-    echo "  ║ 8.  List Running Processes            ║"
-    echo "  ║ 9.  View System Logs                  ║"
-    echo "  ║ 10. Manage Users                      ║"
-    echo "  ║ 11. Backup Data                       ║"
-    echo "  ║ 12. Monitor System Performance        ║"
-    echo "  ║ 13. Configure Firewall                ║"
-    echo "  ║ 14. Manage Services                   ║"
-    echo "  ║ 15. Search for Files                  ║"
-    echo "  ║ 16. Modify File Permissions           ║"
-    echo "  ║ 17. Exit                              ║"
-    echo "  ╚══════════════════════════════════════=╝"
+    echo "  ║ 8.  Display Hardware Information      ║"
+    echo "  ║ 9.  List Running Processes            ║"
+    echo "  ║ 10. View Active Network Connections   ║" # New option
+    echo "  ║ 11. View System Logs                  ║"
+    echo "  ║ 12. Manage Users                      ║"
+    echo "  ║ 13. Backup Data                       ║"
+    echo "  ║ 14. Monitor System Performance        ║"
+    echo "  ║ 15. Configure Firewall                ║"
+    echo "  ║ 16. Manage Services                   ║"
+    echo "  ║ 17. Search for Files                  ║"
+    echo "  ║ 18. Modify File Permissions           ║"
+    echo "  ║ 19. Exit                              ║"
+    echo "  ╚══════════════════════════════════════╝"
 
-    
     echo "  ║                 Version 1.0.0                ║"
     echo "  ║                 Developed by Nirajan Acharya ║"
 }
@@ -64,8 +65,24 @@ system_info() {
     lsb_release -a
 }
 
+display_hardware_info() {
+    echo "CPU Information:"
+    lscpu | grep -E '(Model name|Socket|Thread|Core|CPU MHz)'
+
+    echo -e "\nMemory Information:"
+    free -h
+
+    echo -e "\nDisk Information:"
+    df -h
+}
+
 list_processes() {
     ps aux
+}
+
+display_network_connections() {
+    echo "Active Network Connections:"
+    netstat -tunap
 }
 
 view_system_logs() {
@@ -154,16 +171,18 @@ while true; do
         5) check_disk_space ;;
         6) restart_network_service ;;
         7) system_info ;;
-        8) list_processes ;;
-        9) view_system_logs ;;
-        10) manage_users ;;
-        11) backup_data ;;
-        12) monitor_performance ;;
-        13) configure_firewall ;;
-        14) manage_services ;;
-        15) search_files ;;
-        16) modify_permissions ;;
-        17) echo "Exiting..."; exit ;;
+        8) display_hardware_info ;;
+        9) list_processes ;;
+        10) display_network_connections ;; # New case statement
+        11) view_system_logs ;;
+        12) manage_users ;;
+        13) backup_data ;;
+        14) monitor_performance ;;
+        15) configure_firewall ;;
+        16) manage_services ;;
+        17) search_files ;;
+        18) modify_permissions ;;
+        19) echo "Exiting..."; exit ;;
         *) echo "Invalid option. Please try again." ;;
     esac
     read -p "Press Enter to continue..."
