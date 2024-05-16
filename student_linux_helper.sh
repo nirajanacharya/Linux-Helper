@@ -31,9 +31,16 @@ display_menu() {
     echo "  ║                 Version 1.0.0                ║"
     echo "  ║                 Developed by Nirajan Acharya ║"
 }
+send_notification() {
+    title="$1"
+    message="$2"
+    notify-send "$title" "$message"
+}
 
 update_system() {
+    send_notification "Update System" "Updating system..."
     sudo apt update && sudo apt upgrade -y
+    send_notification "Update System" "System update completed."
 }
 
 install_packages() {
