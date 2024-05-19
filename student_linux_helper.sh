@@ -5,9 +5,9 @@
 
 display_menu() {
     clear
-    echo "  ╔══════════════════════════════════════╗"
-    echo "  ║        Linux Helper      ║"
-    echo "  ╠══════════════════════════════════════╣"
+    echo "  ╔═══════════════════════════════════════╗"
+    echo "  ║        Linux Helper                   ║"
+    echo "  ╠═══════════════════════════════════════╣"
     echo "  ║ 1.  Update System                     ║"
     echo "  ║ 2.  Install Software Packages         ║"
     echo "  ║ 3.  Install VLC Media Player          ║"
@@ -27,7 +27,7 @@ display_menu() {
     echo "  ║ 17. Search for Files                  ║"
     echo "  ║ 18. Modify File Permissions           ║"
     echo "  ║ 19. Exit                              ║"
-    echo "  ╚══════════════════════════════════════╝"
+    echo "  ╚═══════════════════════════════════════╝"
 
     echo "  ║                 Version 1.0.0                ║"
     echo "  ║                 Developed by Nirajan Acharya ║"
