@@ -31,7 +31,9 @@ display_menu() {
     echo "  ║ 16. Manage Services                   ║"
     echo "  ║ 17. Search for Files                  ║"
     echo "  ║ 18. Modify File Permissions           ║"
-    echo "  ║ 19. Exit                              ║"
+    echo "  ║ 19. Check Memory Usage                ║"
+    echo "  ║ 20. Check CPU Usage                   ║"
+    echo "  ║ 21. Exit                              ║"
     echo "  ╚═══════════════════════════════════════╝"
 
     echo "  ║                 Version 1.0.0                ║"
@@ -166,6 +168,16 @@ modify_permissions() {
     sudo chmod $permissions $file_path
 }
 
+memory_usage() {
+    echo "Memory Usage"
+    free -m
+}
+
+cpu_usage() {
+    echo "CPU Usage"
+    mpstat
+}
+
 while true; do
     display_menu
     echo "Enter your choice:"
@@ -189,7 +201,9 @@ while true; do
         16) manage_services ;;
         17) search_files ;;
         18) modify_permissions ;;
-        19) echo "Exiting..."; exit ;;
+	19) memory_usage ;;
+	20) cpu_usage ;;
+        21) echo "Exiting..."; exit ;;
         *) echo "Invalid option. Please try again." ;;
     esac
     read -p "Press Enter to continue..."
