@@ -2,6 +2,11 @@
 # Script developed by Niranjan Acharya
 # Email: nirajan.acharya666@gmail.com
 # GitHub: https://github.com/NirajanAcharya666
+send_notification() {
+    title="$1"
+    message="$2"
+    notify-send "$title" "$message"
+}
 
 display_menu() {
     clear
@@ -34,7 +39,9 @@ display_menu() {
 }
 
 update_system() {
+send_notification "Update System" "Updating system..."
     sudo apt update && sudo apt upgrade -y
+    send_notification "Update System" "System update completed."
 }
 
 install_packages() {
